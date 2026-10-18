@@ -1,0 +1,6 @@
+backend/database/*.db
+backend/database/*.db-journal
+data/tweet_eval/
+models/*.bak
+frontend/dist/
+.pytest_cache/
