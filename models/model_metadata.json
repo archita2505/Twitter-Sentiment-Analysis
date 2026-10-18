@@ -1,0 +1,100 @@
+{
+  "model_name": "PulseSentiment-WordCharNegation-LogReg",
+  "model_version": "2.0.0",
+  "algorithm": "Logistic Regression + word/character/negation TF-IDF",
+  "training_timestamp": "2026-10-12T17:39:28.606182+00:00",
+  "dataset_name": "train.csv",
+  "evaluation_dataset_name": "test.csv",
+  "total_dataset_rows": 57870,
+  "train_samples": 45586,
+  "test_samples": 12284,
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "num_classes": 3,
+  "class_distribution": {
+    "negative": 11063,
+    "neutral": 26592,
+    "positive": 20215
+  },
+  "training_class_distribution": {
+    "negative": 7091,
+    "neutral": 20655,
+    "positive": 17840
+  },
+  "test_class_distribution": {
+    "negative": 3972,
+    "neutral": 5937,
+    "positive": 2375
+  },
+  "scikit_learn_version": "1.9.0",
+  "metrics": {
+    "accuracy": 0.6048,
+    "macro_precision": 0.5936,
+    "macro_recall": 0.6093,
+    "macro_f1": 0.5996,
+    "per_class": {
+      "negative": {
+        "precision": 0.6085,
+        "recall": 0.5808,
+        "f1_score": 0.5944,
+        "support": 3972
+      },
+      "neutral": {
+        "precision": 0.6375,
+        "recall": 0.6065,
+        "f1_score": 0.6216,
+        "support": 5937
+      },
+      "positive": {
+        "precision": 0.5348,
+        "recall": 0.6404,
+        "f1_score": 0.5829,
+        "support": 2375
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "negative",
+        "neutral",
+        "positive"
+      ],
+      "matrix": [
+        [
+          2307,
+          1367,
+          298
+        ],
+        [
+          1311,
+          3601,
+          1025
+        ],
+        [
+          173,
+          681,
+          1521
+        ]
+      ]
+    }
+  },
+  "hyperparameters": {
+    "word_ngram_range": [
+      1,
+      2
+    ],
+    "character_ngram_range": [
+      3,
+      5
+    ],
+    "negation_scope_words": 3,
+    "negation_feature_weight": 8.0,
+    "max_features": 60000,
+    "min_df": 2,
+    "sublinear_tf": true,
+    "C": 2.0,
+    "random_state": 42
+  }
+}

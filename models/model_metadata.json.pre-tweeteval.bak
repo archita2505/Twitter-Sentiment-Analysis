@@ -1,0 +1,81 @@
+{
+  "model_name": "PulseSentiment-LogReg-TFIDF",
+  "model_version": "1.0.0",
+  "algorithm": "Logistic Regression + TF-IDF (Conservative NLP)",
+  "training_timestamp": "2026-10-11T20:38:18.763738+00:00",
+  "dataset_name": "sample_sentiment_tweets.csv",
+  "total_dataset_rows": 600,
+  "train_samples": 450,
+  "test_samples": 150,
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "num_classes": 3,
+  "class_distribution": {
+    "positive": 200,
+    "negative": 200,
+    "neutral": 200
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "per_class": {
+      "negative": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 50
+      },
+      "neutral": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 50
+      },
+      "positive": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 50
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "negative",
+        "neutral",
+        "positive"
+      ],
+      "matrix": [
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0
+        ],
+        [
+          0,
+          0,
+          50
+        ]
+      ]
+    }
+  },
+  "hyperparameters": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 15000,
+    "sublinear_tf": true,
+    "C": 1.5,
+    "random_state": 42
+  }
+}
